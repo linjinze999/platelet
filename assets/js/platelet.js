@@ -26,13 +26,13 @@ window.hitokotoTimer = setInterval(showHitokoto, store.get('hitokoto'));
 
 var re = /x/;
 re.toString = function() {
-  showMessage("哈哈，你打开了控制台，是想要看看我的秘密吗？", 5000, true);
+  showMessage("哈哈，你打开了控制台，是想要看看我的秘密吗？", 9000, true);
   return "";
 };
 
 $(".platelet-tool .eye").click(function() {
   switchNightMode();
-  showMessage("你会做眼保健操吗？", 3000, true);
+  showMessage("你会做眼保健操吗？", 7000, true);
 });
 
 let is_play = false;
@@ -46,7 +46,7 @@ $(".platelet-tool .music").click(function() {
     is_play = true;
     text = "播放血小板之歌了哦";
   }
-  showMessage(text, 3000, true);
+  showMessage(text, 7000, true);
   playVoice("./assets/music/platelet.mp3", is_play);
 });
 
@@ -55,14 +55,14 @@ $(".platelet-tool .comment").click(function() {
 });
 
 $(".platelet-tool .camera").click(function() {
-  showMessage("照好了嘛，是不是很可爱呢？", 5000, true);
+  showMessage("照好了嘛，是不是很可爱呢？", 9000, true);
   window.Live2D.captureName = "Kesshouban.png";
   window.Live2D.captureFrame = true;
 });
 
 $(".platelet-tool .cog").click(function() {
   showSettingWindow();
-  showMessage("主人，按照您的喜好定制我吧", 3000, true);
+  showMessage("主人，按照您的喜好定制我吧", 7000, true);
 });
 
 $(".close").click(() => {
@@ -81,19 +81,19 @@ $.ajax({
           text =
             tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
         text = text.render({ text: $(this).text() });
-        showMessage(text, 3000);
+        showMessage(text, 7000);
       });
     });
-    $.each(result.click, function(index, tips) {
+    /*$.each(result.click, function(index, tips) {
       $(document).on("click", tips.selector, function() {
         var text = tips.text;
         if (Array.isArray(tips.text))
           text =
             tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
         text = text.render({ text: $(this).text() });
-        showMessage(text, 3000, true);
+        showMessage(text, 7000, true);
       });
-    });
+    });*/
     $.each(result.seasons, function(index, tips) {
       var now = new Date();
       var after = tips.date.split("-")[0];
@@ -110,8 +110,22 @@ $.ajax({
           text =
             tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
         text = text.render({ year: now.getFullYear() });
-        showMessage(text, 6000, true);
+        showMessage(text, 10000, true);
       }
+    });
+  }
+});
+
+$.ajax({
+  cache: true,
+  url: "./assets/music/kugimiya/resourceMap.json",
+  dataType: "json",
+  success: function(result) {
+    $(document).on("click", ".platelet #live2d", function() {
+      var keyIndex = Math.floor(Math.random() * result.music.length);
+      var data = result.music[keyIndex];
+      showMessage(data.text.zhCN, 7000, true);
+      playVoice(data.resource, true);
     });
   }
 });
@@ -143,14 +157,14 @@ $.ajax({
   } else {
     text = "嗨~ 快来逗我玩吧！";
   }
-  showMessage(text, 6000);
+  showMessage(text, 10000);
 })();
 
 function showHitokoto() {
   $.getJSON(
     "https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=55&encode=json",
     function(result) {
-      showMessage(result.hitokoto, 5000);
+      showMessage(result.hitokoto, 9000);
     }
   );
 }
@@ -170,7 +184,7 @@ function showMessage(text, timeout, flag) {
     $(".platelet-tips")
       .html(text)
       .fadeTo(200, 1);
-    if (timeout === null) timeout = 5000;
+    if (timeout === null) timeout = 10000;
     hideMessage(timeout);
   }
 }
@@ -179,7 +193,7 @@ function hideMessage(timeout) {
   $(".platelet-tips")
     .stop()
     .css("opacity", 1);
-  if (timeout === null) timeout = 5000;
+  if (timeout === null) timeout = 10000;
   window.setTimeout(function() {
     sessionStorage.removeItem("platelet-text");
   }, timeout);
@@ -237,13 +251,13 @@ function showSettingWindow() {
 }
 
 ipcRenderer.on('setting-hitokoto', (event, data) => {
-    if (Number(data) < 3000) {
-      showMessage("主人，不可以小于3000哦！", 3000, true);
+    if (Number(data) < 7000) {
+      showMessage("主人，不可以小于7000哦！", 7000, true);
       return
     }
     window.clearInterval(window.hitokotoTimer)
     hideMessage(1);
     store.set('hitokoto', Number(data))
-    showMessage("主人，太棒了！", 3000, true);
+    showMessage("主人，太棒了！", 7000, true);
     window.hitokotoTimer = setInterval(showHitokoto, store.get('hitokoto'));
 })

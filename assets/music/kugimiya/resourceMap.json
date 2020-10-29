@@ -1,0 +1,424 @@
+{
+	"music": [
+		{
+			"index": 1,
+			"resource": "./assets/music/kugimiya/voice/01-アンタなんて豆腐の角に頭ぶつけて死んじゃえばいいのよ！.mp3",
+			"text": {
+				"zhCN": "你这家伙，找块豆腐一头撞死算了！"
+			}
+		},
+		{
+			"index": 2,
+			"resource": "./assets/music/kugimiya/voice/02-いい加減、目覚まし時計で起きなさいよね！何でいつも私が起こさなきゃいけないのよ！！.mp3",
+			"text": {
+				"zhCN": "你还是老老实实定个闹钟起床啊！干吗每次都非要我来叫醒你嘛。"
+			}
+		},
+		{
+			"index": 3,
+			"resource": "./assets/music/kugimiya/voice/03-うるさい、うるさい、うるさい！.mp3",
+			"text": {
+				"zhCN": "吵死了吵死了吵死了！真是吵死了！"
+			}
+		},
+		{
+			"index": 4,
+			"resource": "./assets/music/kugimiya/voice/04-選んだのは私でアンタじゃないんだからね.mp3",
+			"text": {
+				"zhCN": "是我选的你，你可别以为是你给了我机会哦！"
+			}
+		},
+		{
+			"index": 5,
+			"resource": "./assets/music/kugimiya/voice/05-おはよーじゃなくて、おはようございますでしょっ.mp3",
+			"text": {
+				"zhCN": "什么“早安”，应该说“您早上好”才对！"
+			}
+		},
+		{
+			"index": 6,
+			"resource": "./assets/music/kugimiya/voice/06-勘違いしないでよね.mp3",
+			"text": {
+				"zhCN": "你可别胡思乱想"
+			}
+		},
+		{
+			"index": 7,
+			"resource": "./assets/music/kugimiya/voice/07-別にあんたのためにやったわけじゃないんだから.mp3",
+			"text": {
+				"zhCN": "我才不是特地为你做的。"
+			}
+		},
+		{
+			"index": 8,
+			"resource": "./assets/music/kugimiya/voice/08-キスなんて100年早いわよ！！.mp3",
+			"text": {
+				"zhCN": "接、接吻什么的，你还早了100年呢！"
+			}
+		},
+		{
+			"index": 9,
+			"resource": "./assets/music/kugimiya/voice/09-くっ…胸のことを….mp3",
+			"text": {
+				"zhCN": "哭…我的胸部…"
+			}
+		},
+		{
+			"index": 10,
+			"resource": "./assets/music/kugimiya/voice/10-怪我でもされたら、私が困るじゃない.mp3",
+			"text": {
+				"zhCN": "要是你受伤的话，岂不是会让我很头疼。"
+			}
+		},
+		{
+			"index": 11,
+			"resource": "./assets/music/kugimiya/voice/11-このぉバカ！-.mp3",
+			"text": {
+				"zhCN": "你这个笨蛋！"
+			}
+		},
+		{
+			"index": 12,
+			"resource": "./assets/music/kugimiya/voice/12-さよならなんて言ってあげないんだから！.mp3",
+			"text": {
+				"zhCN": "再见之类的话，我才懒得对你说…"
+			}
+		},
+		{
+			"index": 13,
+			"resource": "./assets/music/kugimiya/voice/13-心配なんてしてないんだからね！.mp3",
+			"text": {
+				"zhCN": "我才没有为你担心！"
+			}
+		},
+		{
+			"index": 14,
+			"resource": "./assets/music/kugimiya/voice/14-好きでこんな格好してるわけじゃないんだからね…あんたの前だけよ….mp3",
+			"text": {
+				"zhCN": "我、我可不是因为自己喜欢才打扮成这样…只有在你面前罢了…"
+			}
+		},
+		{
+			"index": 15,
+			"resource": "./assets/music/kugimiya/voice/15-もう…バカ….mp3",
+			"text": {
+				"zhCN": "真是的…笨蛋…"
+			}
+		},
+		{
+			"index": 16,
+			"resource": "./assets/music/kugimiya/voice/16-全力で来なさいよ？叩き潰してあげるから.mp3",
+			"text": {
+				"zhCN": "尽管放马过来吧！让我打你个落花流水！"
+			}
+		},
+		{
+			"index": 17,
+			"resource": "./assets/music/kugimiya/voice/17-そばにいなさい！一生よ！いいわね！.mp3",
+			"text": {
+				"zhCN": "留在我身边！一辈子！没异议吧！"
+			}
+		},
+		{
+			"index": 18,
+			"resource": "./assets/music/kugimiya/voice/18-誕生日プレゼントなんて誰にももらえないだろうから.mp3",
+			"text": {
+				"zhCN": "生日礼物这种东西，我想没有其他人会送给你了吧…"
+			}
+		},
+		{
+			"index": 19,
+			"resource": "./assets/music/kugimiya/voice/19-はい.mp3",
+			"text": {
+				"zhCN": "hi~"
+			}
+		},
+		{
+			"index": 20,
+			"resource": "./assets/music/kugimiya/voice/20-これプレゼント….mp3",
+			"text": {
+				"zhCN": "这个送给你……"
+			}
+		},
+		{
+			"index": 21,
+			"resource": "./assets/music/kugimiya/voice/21-ちょっと待ちなさいよ！この鈍感男！.mp3",
+			"text": {
+				"zhCN": "给我等一下！你这个木头人！"
+			}
+		},
+		{
+			"index": 22,
+			"resource": "./assets/music/kugimiya/voice/22-なんで….mp3",
+			"text": {
+				"zhCN": "为什么…"
+			}
+		},
+		{
+			"index": 23,
+			"resource": "./assets/music/kugimiya/voice/23-なんで気付かないのよぉ！.mp3",
+			"text": {
+				"zhCN": "为什么你就是注意不到嘛！"
+			}
+		},
+		{
+			"index": 24,
+			"resource": "./assets/music/kugimiya/voice/24-ついでだから、あんたも誘ってあげるわ.mp3",
+			"text": {
+				"zhCN": "正好顺便，我也邀请一下你吧。"
+			}
+		},
+		{
+			"index": 25,
+			"resource": "./assets/music/kugimiya/voice/25-電話なんかしてこなくても…寂しくなんてないんだから….mp3",
+			"text": {
+				"zhCN": "就算你不打电话给我，我也没什么寂寞的…"
+			}
+		},
+		{
+			"index": 26,
+			"resource": "./assets/music/kugimiya/voice/26-隣に来ないでよ、恥ずかしいじゃない.mp3",
+			"text": {
+				"zhCN": "别离我这么近…丢死人了…"
+			}
+		},
+		{
+			"index": 27,
+			"resource": "./assets/music/kugimiya/voice/27-な、なによあいつ！.mp3",
+			"text": {
+				"zhCN": "那、那家伙干什么嘛！"
+			}
+		},
+		{
+			"index": 28,
+			"resource": "./assets/music/kugimiya/voice/28-私というものがありながら！うぅぅ.mp3",
+			"text": {
+				"zhCN": "明明已经有我了的说！呜呜…"
+			}
+		},
+		{
+			"index": 29,
+			"resource": "./assets/music/kugimiya/voice/29-逃げないで、話くらいちゃんと聞きなさいよね.mp3",
+			"text": {
+				"zhCN": "别逃，至少听我把话说完！"
+			}
+		},
+		{
+			"index": 30,
+			"resource": "./assets/music/kugimiya/voice/30-もうっ、知らない、バカ！！何言わせんのよ！！.mp3",
+			"text": {
+				"zhCN": "真是的，不管啦笨蛋！！你让人家怎么说嘛！！"
+			}
+		},
+		{
+			"index": 31,
+			"resource": "./assets/music/kugimiya/voice/31-寝起きになにしてんのよ！.mp3",
+			"text": {
+				"zhCN": "你睡糊涂了吧，干什么呐！"
+			}
+		},
+		{
+			"index": 32,
+			"resource": "./assets/music/kugimiya/voice/32-NOとは言わせないわよ！.mp3",
+			"text": {
+				"zhCN": "你可不许对我说“No”哦"
+			}
+		},
+		{
+			"index": 33,
+			"resource": "./assets/music/kugimiya/voice/33-恥ずかしいけど、手、手くらい繋いであげてもいいわよ、ホラ！！.mp3",
+			"text": {
+				"zhCN": "虽然很丢人，让、让、让你牵牵手还是可以容忍…来吧…"
+			}
+		},
+		{
+			"index": 34,
+			"resource": "./assets/music/kugimiya/voice/34-ひ…ひざまくらぁ!……い、一分だけだからねっ.mp3",
+			"text": {
+				"zhCN": "睡、睡…睡在我的腿上！？只、只能睡1分钟哦！"
+			}
+		},
+		{
+			"index": 35,
+			"resource": "./assets/music/kugimiya/voice/35-ふ、二人しかいないんなら….mp3",
+			"text": {
+				"zhCN": "唔，今天只有我们两个人的话…"
+			}
+		},
+		{
+			"index": 36,
+			"resource": "./assets/music/kugimiya/voice/36-今日は仕方ないわね….mp3",
+			"text": {
+				"zhCN": "真是拿你没办法呢…"
+			}
+		},
+		{
+			"index": 37,
+			"resource": "./assets/music/kugimiya/voice/37-変態、変態、変態、変態、変態バカ大変態！！！.mp3",
+			"text": {
+				"zhCN": "变态、变态、变态、变态、变态笨蛋大变态！！！"
+			}
+		},
+		{
+			"index": 38,
+			"resource": "./assets/music/kugimiya/voice/38-もう知らない….mp3",
+			"text": {
+				"zhCN": "真是的，不管了啦…"
+			}
+		},
+		{
+			"index": 39,
+			"resource": "./assets/music/kugimiya/voice/39-ボケーっとしてるんじゃないわよ！！.mp3",
+			"text": {
+				"zhCN": "别在那装傻了啦！！真是的"
+			}
+		},
+		{
+			"index": 40,
+			"resource": "./assets/music/kugimiya/voice/40-蹴り飛ばすわよ！.mp3",
+			"text": {
+				"zhCN": "小心我一脚踢飞你！"
+			}
+		},
+		{
+			"index": 41,
+			"resource": "./assets/music/kugimiya/voice/41-まっ…まぁ、アナタがどうしてもって言うのなら.mp3",
+			"text": {
+				"zhCN": "啊…也好，既然你坚持要带着…"
+			}
+		},
+		{
+			"index": 42,
+			"resource": "./assets/music/kugimiya/voice/42-仕方ないけど….mp3",
+			"text": {
+				"zhCN": "我也没办法了呢…"
+			}
+		},
+		{
+			"index": 43,
+			"resource": "./assets/music/kugimiya/voice/43-見せたいわけじゃないんだから！.mp3",
+			"text": {
+				"zhCN": "所以说我不想给别人看到啊！"
+			}
+		},
+		{
+			"index": 44,
+			"resource": "./assets/music/kugimiya/voice/44-あんただから….mp3",
+			"text": {
+				"zhCN": "只想给你一个人…"
+			}
+		},
+		{
+			"index": 45,
+			"resource": "./assets/music/kugimiya/voice/45-無視しないでよ！謝るから！.mp3",
+			"text": {
+				"zhCN": "不准无视我！快给我道歉！"
+			}
+		},
+		{
+			"index": 46,
+			"resource": "./assets/music/kugimiya/voice/46-目から汗が出てるだけなんだから！.mp3",
+			"text": {
+				"zhCN": "所以说只是从眼睛里流出来的汗啦！"
+			}
+		},
+		{
+			"index": 47,
+			"resource": "./assets/music/kugimiya/voice/47-涙じゃないわよぉーーー！.mp3",
+			"text": {
+				"zhCN": "才~不~是眼泪呢！"
+			}
+		},
+		{
+			"index": 48,
+			"resource": "./assets/music/kugimiya/voice/48-もぉ～バカバカバカ！！.mp3",
+			"text": {
+				"zhCN": "真是的~笨蛋、笨蛋、笨蛋！！"
+			}
+		},
+		{
+			"index": 49,
+			"resource": "./assets/music/kugimiya/voice/49-知らない知らない知らない.mp3",
+			"text": {
+				"zhCN": "不知道、不知道、不知道！"
+			}
+		},
+		{
+			"index": 50,
+			"resource": "./assets/music/kugimiya/voice/50-妬いてるわけじゃないわよ、違うって言ってるじゃない！.mp3",
+			"text": {
+				"zhCN": "才没有吃醋呢，你在说什么傻话啊！"
+			}
+		},
+		{
+			"index": 51,
+			"resource": "./assets/music/kugimiya/voice/51-優柔不断な奴はキライだからね！.mp3",
+			"text": {
+				"zhCN": "所以说我最讨厌优柔寡断的家伙了！"
+			}
+		},
+		{
+			"index": 52,
+			"resource": "./assets/music/kugimiya/voice/52-よくないわよ。.mp3",
+			"text": {
+				"zhCN": "才不好呢。"
+			}
+		},
+		{
+			"index": 55,
+			"resource": "./assets/music/kugimiya/voice/55-あたしのこと好きでも嫌いでもないなんて言うのは.mp3",
+			"text": {
+				"zhCN": "对你说我喜欢你还是不讨厌你什么的"
+			}
+		},
+		{
+			"index": 56,
+			"resource": "./assets/music/kugimiya/voice/56-ラーメン伸びるわよ、はやく食べなさいよ！.mp3",
+			"text": {
+				"zhCN": "拉面都泡糟了啦！快点吃掉啦！"
+			}
+		},
+		{
+			"index": 57,
+			"resource": "./assets/music/kugimiya/voice/57-えっふぅふぅしてくれ？ばかぁー.mp3",
+			"text": {
+				"zhCN": "诶，让我帮你吹吹？笨蛋啊你~"
+			}
+		},
+		{
+			"index": 58,
+			"resource": "./assets/music/kugimiya/voice/58-利用するに値しないわね。アンタなんか….mp3",
+			"text": {
+				"zhCN": "我才没有觉得你很有用呢…"
+			}
+		},
+		{
+			"index": 59,
+			"resource": "./assets/music/kugimiya/voice/59-全然嬉しくないんだからっ.mp3",
+			"text": {
+				"zhCN": "我才没有很开心呢！"
+			}
+		},
+		{
+			"index": 60,
+			"resource": "./assets/music/kugimiya/voice/60-連絡くらいよこしなさいよ！心配したんだから….mp3",
+			"text": {
+				"zhCN": "要多多的和我联系！不然我会担心你的…"
+			}
+		},
+		{
+			"index": 61,
+			"resource": "./assets/music/kugimiya/voice/61-ろくなことがないわね…あんたと一緒にいられるのは私くらいなんだから….mp3",
+			"text": {
+				"zhCN": "所以说别做些不正经的事了…对好不容易才和你在一起的我…"
+			}
+		},
+		{
+			"index": 62,
+			"resource": "./assets/music/kugimiya/voice/62-わ、私だけを見ていればいいのよ！.mp3",
+			"text": {
+				"zhCN": "只、只准你看着我哦！"
+			}
+		}
+	]
+}

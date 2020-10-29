@@ -49,6 +49,9 @@ function createWindow() {
     mainWindow.show();
     mainWindow.setTouchBar(touchBar);
   });
+
+  // todo
+  !app.isPackaged && mainWindow.webContents.openDevTools()
 }
 
 function createSettingWindow() {
