@@ -23,16 +23,30 @@ String.prototype.render = function(context) {
 };
 
 window.hitokotoTimer = setInterval(showHitokoto, store.get('hitokoto'));
+function initAutoSpeak(){
+  window.clearTimeout(window.autoSpeakTimer);
+  window.autoSpeakTimer = null;
+  var speak1 = store.get('autoSpeak1') || 0;
+  var speak2 = store.get('autoSpeak2') || 0;
+  if(speak1 && speak2 && speak2 >= speak1){
+    var timeout = Math.floor(Math.random()*(speak2 - speak1)) + speak1;
+    window.autoSpeakTimer = window.setTimeout(function () {
+      speakKugimiyaMusic();
+      initAutoSpeak();
+    }, timeout * 60 * 1000);
+  };
+}
+initAutoSpeak();
 
 var re = /x/;
 re.toString = function() {
-  showMessage("哈哈，你打开了控制台，是想要看看我的秘密吗？", 9000, true);
+  showMessage("哈哈，你打开了控制台，是想要看看我的秘密吗？", store.get('hitokoto'), true);
   return "";
 };
 
 $(".platelet-tool .eye").click(function() {
   switchNightMode();
-  showMessage("你会做眼保健操吗？", 7000, true);
+  showMessage("你会做眼保健操吗？", store.get('hitokoto'), true);
 });
 
 let is_play = false;
@@ -46,7 +60,7 @@ $(".platelet-tool .music").click(function() {
     is_play = true;
     text = "播放血小板之歌了哦";
   }
-  showMessage(text, 7000, true);
+  showMessage(text, store.get('hitokoto'), true);
   playVoice("./assets/music/platelet.mp3", is_play);
 });
 
@@ -55,14 +69,14 @@ $(".platelet-tool .comment").click(function() {
 });
 
 $(".platelet-tool .camera").click(function() {
-  showMessage("照好了嘛，是不是很可爱呢？", 9000, true);
+  showMessage("照好了嘛，是不是很可爱呢？", store.get('hitokoto'), true);
   window.Live2D.captureName = "Kesshouban.png";
   window.Live2D.captureFrame = true;
 });
 
 $(".platelet-tool .cog").click(function() {
   showSettingWindow();
-  showMessage("主人，按照您的喜好定制我吧", 7000, true);
+  showMessage("主人，按照您的喜好定制我吧", store.get('hitokoto'), true);
 });
 
 $(".close").click(() => {
@@ -81,7 +95,7 @@ $.ajax({
           text =
             tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
         text = text.render({ text: $(this).text() });
-        showMessage(text, 7000);
+        showMessage(text, store.get('hitokoto'));
       });
     });
     /*$.each(result.click, function(index, tips) {
@@ -116,19 +130,26 @@ $.ajax({
   }
 });
 
+// 记录kugimiya语音信息
+var kugimiyaMusic;
 $.ajax({
   cache: true,
   url: "./assets/music/kugimiya/resourceMap.json",
   dataType: "json",
   success: function(result) {
+    kugimiyaMusic = result;
     $(document).on("click", ".platelet #live2d", function() {
-      var keyIndex = Math.floor(Math.random() * result.music.length);
-      var data = result.music[keyIndex];
-      showMessage(data.text.zhCN, 7000, true);
-      playVoice(data.resource, true);
+      speakKugimiyaMusic();
     });
   }
 });
+// kugimiya语音
+function speakKugimiyaMusic() {
+  var keyIndex = Math.floor(Math.random() * kugimiyaMusic.music.length);
+  var data = kugimiyaMusic.music[keyIndex];
+  showMessage(data.text.zhCN, store.get('hitokoto'), true);
+  playVoice(data.resource, true);
+}
 
 (function() {
   var text;
@@ -251,13 +272,16 @@ function showSettingWindow() {
 }
 
 ipcRenderer.on('setting-hitokoto', (event, data) => {
-    if (Number(data) < 7000) {
-      showMessage("主人，不可以小于7000哦！", 7000, true);
+    if (Number(data.hitokotoValue) < 3000) {
+      showMessage("主人，台词切换速度不可以小于3000哦！", store.get('hitokoto'), true);
       return
     }
-    window.clearInterval(window.hitokotoTimer)
+    window.clearInterval(window.hitokotoTimer);
     hideMessage(1);
-    store.set('hitokoto', Number(data))
-    showMessage("主人，太棒了！", 7000, true);
+    store.set('hitokoto', Number(data.hitokotoValue));
+    store.set('autoSpeak1', Number(data.autoSpeak1) || 0);
+    store.set('autoSpeak2', Number(data.autoSpeak2) || 0);
+    initAutoSpeak();
+    showMessage("主人，太棒了！", store.get('hitokoto'), true);
     window.hitokotoTimer = setInterval(showHitokoto, store.get('hitokoto'));
 })
