@@ -250,7 +250,7 @@ function formatSeconds(value) {
 function playVoice(file, is_play) {
   if (is_play) {
     $(".music").html(
-      '<audio controls="controls" id="audio_player" style="display:none;"> <source src="' +
+      '<audio controls="controls" id="audio_player" autoplay="autoplay" style="display:none;"> <source src="' +
         file +
         '" > </audio><embed id="MPlayer_Alert" src="' +
         file +

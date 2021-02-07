@@ -8,11 +8,11 @@ const schema = {
   },
   autoSpeak1: {
     type: "number",
-    default: 0.2
+    default: 30
   },
   autoSpeak2: {
     type: "number",
-    default: 0.3
+    default: 90
   }
 };
 
