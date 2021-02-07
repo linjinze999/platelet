@@ -2,6 +2,8 @@ const path = require("path");
 const { app, BrowserWindow, TouchBar, ipcMain, screen } = require("electron");
 const { TouchBarButton } = TouchBar;
 
+app.commandLine.appendSwitch("autoplay-policy", "no-user-gesture-required");
+
 const MAIN_WIDTH = 320;
 const MAIN_HEIGHT = 350;
 
